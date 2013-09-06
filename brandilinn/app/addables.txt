@@ -1,0 +1,9 @@
+Possible things to add for assignment:
+
+- Restaurant addresses, relevent to delivery address (maybe chamge to just match zip)
+- Food descriptions
+- Sort food by price
+- Sort food by calories
+- Show only food/drink/desert
+- Back to list button on restaurant page
+- Mentions time entry, does not feature; add
