@@ -46,7 +46,7 @@
       <li ng-repeat="menuItem in restaurant.menuItems">
         <a href ng-click="cart.add(menuItem, restaurant)">
           <span class="menu-food">{{menuItem.name}}</span>
-          <span class="menu-price">{{menuItem.price}}</span>
+          <span class="menu-price">{{menuItem.price | currency}}</span>
           <i class="icon-plus-sign"></i>
         </a>
       </li>
@@ -60,7 +60,7 @@
       <ul class="unstyled">
         <li ng-repeat="item in cart.items">
           <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
-          {{item.qty}} &times; {{item.name}}
+          {{item.qty}} &times; {{item.name}} - {{item.price*item.qty | currency}}
         </li>
       </ul>
       <div class="pull-right" ng-show="cart.items.length">

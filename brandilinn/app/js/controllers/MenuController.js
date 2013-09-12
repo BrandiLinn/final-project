@@ -15,7 +15,7 @@ var filter = $scope.filter = {
   };
 
   var allRestaurants = Restaurant.query(filterAndSortItems);
-  var allItems = $scope.restaurant;
+  var allItems = $scope.restaurant.$query(filterAndSortItems);
   $scope.$watch('filter', filterAndSortItems, true);
 
   console.log(allItems);
