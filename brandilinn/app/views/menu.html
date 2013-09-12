@@ -43,10 +43,10 @@
           <span>Price {{sortIconFor('price')}}</span>
         </a>
       </li>
-      <li ng-repeat="menuItem in restaurant.menuItems">
+      <li ng-repeat="food in foods">
         <a href ng-click="cart.add(menuItem, restaurant)">
-          <span class="menu-food">{{menuItem.name}}</span>
-          <span class="menu-price">{{menuItem.price | currency}}</span>
+          <span class="menu-food">{{food.name}}</span>
+          <span class="menu-price">{{food.price | currency}}</span>
           <i class="icon-plus-sign"></i>
         </a>
       </li>

@@ -9,7 +9,7 @@ foodMeApp.controller('MenuController',
   //////////////////////
 
 
-var filter = $scope.filter = {
+  var filter = $scope.filter = {
     price: null,
     name: null
   };
@@ -18,10 +18,8 @@ var filter = $scope.filter = {
   var allItems = $scope.restaurant;
   $scope.$watch('filter', filterAndSortItems, true);
 
-  console.log(allItems);
-
   function filterAndSortItems() {
-    $scope.menuItems = [];
+    $scope.foods = [];
 
     // filter
     angular.forEach(allItems['menuItems'], function(item, key) {
@@ -32,13 +30,11 @@ var filter = $scope.filter = {
       if (filter.name && filter.name !== item.name) {
         return;
       }
-console.log(item['name']);
-      $scope.menuItems.push(item);
+      $scope.foods.push(item);
     });
 
-
     // sort
-    $scope.menuItems.sort(function(a, b) {
+    $scope.foods.sort(function(a, b) {
       if (a[filter.sortBy] > b[filter.sortBy]) {
         return filter.sortAsc ? 1 : -1;
       }
@@ -51,7 +47,6 @@ console.log(item['name']);
     });
   };
 
-
   $scope.sortBy = function(key) {
     if (filter.sortBy === key) {
       filter.sortAsc = !filter.sortAsc;
@@ -61,15 +56,11 @@ console.log(item['name']);
     }
   };
 
-
   $scope.sortIconFor = function(key) {
     if (filter.sortBy !== key) {
       return '';
     }
-
     return filter.sortAsc ? '\u25B2' : '\u25BC';
   };
-
-
 
 });
