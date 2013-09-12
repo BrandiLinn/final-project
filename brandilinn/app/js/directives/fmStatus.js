@@ -19,8 +19,9 @@ foodMeApp.directive('fmStatus', function() {
       ];
       scope.status = weAre[number];
       element[0].onclick = function() {
+        var number = Math.floor(Math.random()*10);
         scope.status = weAre[number];
-        console.log('test');
+        console.log(scope.status);
       }
     },
     template:
