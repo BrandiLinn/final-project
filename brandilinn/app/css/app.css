@@ -170,8 +170,9 @@ input.ng-invalid.ng-dirty {
 
 .fm-menu-list a {
   color: inherit;
-  display: block;
+  display: inline-block;
   height: 1.25em;
+  width: 100%;
   border-bottom: 1px dotted #aaa;
 }
 
@@ -202,12 +203,24 @@ input.ng-invalid.ng-dirty {
   display: block;
 }
 
+.fm-menu-list .menu-title a {
+  font-weight: bold;
+  border-bottom-style: solid;
+}
+
 .fm-menu-list .menu-food {
   width: 80%;
 }
 .fm-menu-list .menu-price {
   width: 15%;
   text-align: right;
+}
+
+.fm-menu-list a.menu-food {
+  width: 84%;
+}
+.fm-menu-list a.menu-price {
+  text-align: left;
 }
 
 .fm-cart li {
