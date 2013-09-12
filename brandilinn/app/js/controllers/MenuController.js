@@ -15,7 +15,7 @@ var filter = $scope.filter = {
   };
 
   var allRestaurants = Restaurant.query(filterAndSortItems);
-  var allItems = $scope.restaurant.$query(filterAndSortItems);
+  var allItems = $scope.restaurant;
   $scope.$watch('filter', filterAndSortItems, true);
 
   console.log(allItems);
@@ -24,7 +24,7 @@ var filter = $scope.filter = {
     $scope.menuItems = [];
 
     // filter
-    angular.forEach(allItems, function(item, key) {
+    angular.forEach(allItems['menuItems'], function(item, key) {
       if (filter.price && filter.price !== item.price) {
         return;
       }
@@ -32,7 +32,7 @@ var filter = $scope.filter = {
       if (filter.name && filter.name !== item.name) {
         return;
       }
-
+console.log(item['name']);
       $scope.menuItems.push(item);
     });
 
