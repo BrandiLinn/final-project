@@ -18,12 +18,12 @@ foodMeApp.directive('fmStatus', function() {
         'whalers on the moon'
       ];
       scope.status = weAre[number];
-      element.onclick = function() {
+      element[0].onclick = function() {
         scope.status = weAre[number];
         console.log('test');
       }
     },
     template:
-      '<a>We\'re also {{status}}!</a>'
+      '<p>We\'re also {{status}}!</p>'
   };
 });
