@@ -33,5 +33,9 @@ foodMeApp.config(function($routeProvider) {
       }).
       when('/help', {
         templateUrl: 'views/help.html'
+      }).
+      when('/suggestion', {
+        controller: 'SuggestionController',
+        templateUrl: 'views/suggestion.html'
       });
 });
