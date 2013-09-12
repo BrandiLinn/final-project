@@ -10,7 +10,8 @@ foodMeApp.controller('RestaurantsController',
   var filter = $scope.filter = {
     cuisine: [],
     price: null,
-    rating: null
+    rating: null,
+    search: null
   };
 
   var allRestaurants = Restaurant.query(filterAndSortRestaurants);

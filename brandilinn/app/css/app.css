@@ -138,6 +138,10 @@ input.ng-invalid.ng-dirty {
   height: 100px;
 }
 
+.search {
+  width:90%;
+}
+
 
 /* menu */
 
