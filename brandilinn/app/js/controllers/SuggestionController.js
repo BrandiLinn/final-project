@@ -15,7 +15,6 @@ foodMeApp.controller('SuggestionController',
     while (number > count) {
       number = Math.floor(number/2);
     }
-    console.log(number);
     $scope.suggested = allRestaurants[number];
   };
 
