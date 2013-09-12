@@ -160,14 +160,19 @@ input.ng-invalid.ng-dirty {
 
 .fm-menu-list li {
   list-style-type: none;
+  height: 1.75em;
 }
 
 .fm-menu-list li span {
-  padding-right: 20px;
+  /*padding-right: 20px;*/
+  display: inline-block;
 }
 
 .fm-menu-list a {
   color: inherit;
+  display: block;
+  height: 1.25em;
+  border-bottom: 1px dotted #aaa;
 }
 
 .fm-menu-list a:hover {
@@ -187,8 +192,22 @@ input.ng-invalid.ng-dirty {
   color: black;
 }
 
+.fm-menu-list ul {
+  width: 75%;
+  margin: auto;
+}
+
 .fm-menu-list ul li {
-  text-align: center;
+  /*text-align: center;*/
+  display: block;
+}
+
+.fm-menu-list .menu-food {
+  width: 80%;
+}
+.fm-menu-list .menu-price {
+  width: 15%;
+  text-align: right;
 }
 
 .fm-cart li {
